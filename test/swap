@@ -1,0 +1,55 @@
+package org.example;
+
+import junit.framework.TestCase;
+import org.junit.Test;
+
+import java.util.Scanner;
+
+public class SwapfunctionTest extends TestCase {
+        public static void main(String[] args) {
+        int[] result=swapuserinput();
+        int c = addition(result[0], result[1]);
+        concatination(c);
+    }
+    @Test
+    public static int[] swapuserinput() {
+        int a, b, temp, s;
+        String c;
+        assertEquals("Enter value for a: ");
+        Scanner sc1 = new Scanner(System.in);
+        a = sc1.nextInt();
+        assertEquals("Enter value for b: ");
+        Scanner sc2 = new Scanner(System.in);
+        b = sc2.nextInt();
+        temp = a;
+        a = b;
+        b = temp;
+        assertEquals("Value of a after swap: " + a);
+        assertEquals("Value of a after swap: " + b);
+        return new int[] {a, b};
+    }
+
+    private static void assertEquals(String s) {
+    }
+    @Test
+    public static int addition(int a, int b) {
+        String c;
+        String s1 = String.valueOf(a);
+        String s2 = String.valueOf(b);
+        c = s1 + s2;
+        assertEquals(c);
+        int i =Integer.parseInt(c);
+        return i;
+    }
+    @Test
+    public static void concatination(int i) {
+        int s=0;
+        for (int j=0; j<i; j++){
+            int r=i%10;
+            i=i/10;
+            s=s+r;
+        }
+        assertEquals("s");
+    }
+
+}
