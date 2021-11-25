@@ -1,0 +1,22 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class evenodd {
+    public static void main(String[] args) {
+        int a;
+        System.out.println("Enter a +ve Number for a: ");
+        Scanner sc1 = new Scanner(System.in);
+        a = sc1.nextInt();
+        if (a%2==0){
+            System.out.println("Given NUmber is Even: " + a);
+        }
+        else {
+            System.out.println("Given NUmber is Odd: " + a);
+        }
+        for (int i=0; i<=10;i++){
+            System.out.println("Table for a: " + a + "*" + i + "=" + a*i) ;
+
+        }
+    }
+}
