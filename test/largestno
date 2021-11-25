@@ -1,0 +1,52 @@
+package org.example;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+
+public class largestNofunction {
+    public static void main(String[] args) {
+        int l= userinput_Largest();
+        concatination(l);
+    }
+    @Test
+   public static int userinput_Largest() {
+       int arr[] = new int[3];
+       int i = 0;
+       int r = arr[arr.length - 1];
+       while (i < arr.length) {
+           assertEquals("Enter a 3 digit number: ");
+           Scanner sc1 = new Scanner(System.in);
+           arr[i] = sc1.nextInt();
+           String s1 = String.valueOf(arr[i]);
+           i++;
+           if (s1.length() == 3) {
+               assertEquals("Given No is valid");
+           } else {
+               assertEquals("Given No is Invalid");
+               i--;
+           }
+           
+       }
+        assertEquals("elements of array sorted: " + Arrays. toString(arr));
+        assertEquals("Largest Number: " + arr[arr.length-1]);
+       return arr[r];
+   }
+   @Test
+    public static void concatination(int r) {
+        int s=0;
+        for (int j = 0; j<r; j++) {
+            int p = r % 10;
+            r = r / 10;
+            s = s + p;
+        }
+       assertEquals("Concatinated output: " + s);
+    }
+
+    private static void assertEquals(String s) {
+    }
+}
+            
+        
