@@ -1,0 +1,42 @@
+package org.example;
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+
+public class LargestNo {
+    public static void main(String[] args) {
+        int arr[] = new int[3];
+        int i=0;
+        while (i < arr.length )
+        {
+            System.out.println("Enter a 3 digit number: ");
+            Scanner sc1 = new Scanner(System.in);
+            arr[i] = sc1.nextInt();
+            String s1 = String.valueOf(arr[i]);
+            int sl=s1.length();
+            System.out.println("String Length " + "of" + arr[i] + "is" + sl);
+            i++;
+            if (s1.length() == 3) {
+                    System.out.println("Given No is valid");
+            }
+            else {
+                    System.out.println("Given No is Invalid");
+                    i--;
+                }
+            }
+            Arrays.sort(arr);
+            int s = 0;
+            int r = arr[arr.length - 1];
+            System.out.println("elements of array sorted: " + Arrays. toString(arr));
+            System.out.println("Largest Number: " + arr[arr.length - 1]);
+            for (int j = 0; j<r; j++) {
+                int p = r % 10;
+                r = r / 10;
+                s = s + p;
+            }
+        System.out.println("Concatinated output: " + s);
+
+
+        }
+    }
