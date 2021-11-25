@@ -1,0 +1,48 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class swapfunction {
+    public static void main(String[] args) {
+        int[] result=swapuserinput();
+        int c = addition(result[0], result[1]);
+        concatination(c);
+    }
+
+    public static int[] swapuserinput() {
+        int a, b, temp, s;
+        String c;
+        System.out.println("Enter value for a: ");
+        Scanner sc1 = new Scanner(System.in);
+        a = sc1.nextInt();
+        System.out.println("Enter value for b: ");
+        Scanner sc2 = new Scanner(System.in);
+        b = sc2.nextInt();
+        temp = a;
+        a = b;
+        b = temp;
+        System.out.println("Value of a after swap: " + a);
+        System.out.println("Value of a after swap: " + b);
+        return new int[] {a, b};
+    }
+    public static int addition(int a, int b) {
+        String c;
+        String s1 = String.valueOf(a);
+        String s2 = String.valueOf(b);
+        c = s1 + s2;
+        System.out.println(c);
+        int i =Integer.valueOf(c);
+        return i;
+    }
+    public static void concatination(int i) {
+        int s=0;
+        for (int j=0; j<i; j++){
+            int r=i%10;
+            i=i/10;
+            s=s+r;
+        }
+        System.out.println(s);
+    }
+
+
+}
