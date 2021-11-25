@@ -1,0 +1,33 @@
+package org.example;
+
+import java.util.Scanner;
+import org.junit.Test;
+
+public class evenoddfunctiontest {
+    public static void main(String[] args) {
+        evenodd();
+    }
+
+    @Test
+    public static void evenodd() {
+        int a;
+        assertEquals("Enter a Number to check for Even or Odd: ");
+        Scanner sc1 = new Scanner(System.in);
+        a = sc1.nextInt();
+        if (a % 2 == 0) {
+            assertEquals("Given NUmber is Even: " + a);
+        } else {
+            assertEquals("Given NUmber is Odd: " + a);
+        }
+        for (int i = 0; i <= 10; i++) {
+            assertEquals("Table for a: " + a + "*" + i + "=" + a * i);
+
+        }
+    }
+
+    private static void assertEquals(String s) {
+    }
+}
+
+
+
